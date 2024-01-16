@@ -5,8 +5,8 @@ _Main() {
   local cmd
   local parentPoms
   local childPoms
-  parentPoms=("cli-dependencies.xml" "pom.xml")
-  childPoms=("cli-lib-starter.xml")
+  parentPoms=("cli-dependencies.xml")
+  childPoms=()
 
   for pom in "${parentPoms[@]}" ; do
       cmd="./mvnw -f $pom clean install -N"
